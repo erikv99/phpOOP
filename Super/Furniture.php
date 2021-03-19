@@ -1,9 +1,9 @@
-<<?php 
+<?php 
 /** Furniture base class */
 class Furniture
 {
 	// Constant in class scope
-	protected const MANUFACTURER = "Furniture Kings Inc";
+	public const MANUFACTURER = "Furniture Kings Inc";
 	
 	// Private properties / vars
 	private $width;
@@ -12,8 +12,8 @@ class Furniture
 
 	protected function __construct(int $width, int $height)
 	{
-		$this->material = $material;
-		$this->color = $color;
+		$this->width = $width;
+		$this->height = $height;
 	}
 
 	public function __destruct()
@@ -55,15 +55,6 @@ class Furniture
 	public function setHeight(int $height)
 	{
 		$this->height = $height;
-	}
-
-	/** 
-	* Will return the constant MANUFACTURER
-	* @return const string MANUFACTURER
-	*/
-	public function getManufacturer()
-	{
-		return MANUFACTURER;
 	}
 }
 ?>

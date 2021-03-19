@@ -1,5 +1,5 @@
-<<?php 
-include_once("../Super/Furniture.php");
+<?php 
+include_once("Super/Furniture.php");
 /** Table class (inherits from Furniture) */
 class Table extends Furniture
 {
