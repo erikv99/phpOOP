@@ -1,5 +1,6 @@
 <?php 
 include_once("Super/Furniture.php");
+
 /** Table class (inherits from Furniture) */
 class Table extends Furniture
 {
@@ -17,6 +18,7 @@ class Table extends Furniture
 	*/
 	public function setMaterial(string $material)
 	{	
+		// Throwing an exception if the lenght of the material string name is less then 1 
 		if (strlen($material) <= 1) 
 		{
 			throw new Exception("<br> ERROR: Material must atleast contain 2 characters <br><br>");
@@ -35,9 +37,13 @@ class Table extends Furniture
 		return $this->material;
 	}
 
-	/** Overriden setWidth function */
+	/** 
+	* Overriden setWidth function 
+	* @param int $width
+	*/
 	public function setWidth(int $width) 
 	{
+		// Usually code would be placed before the call to the original function, but in this case it wouldn't make any sense would it.
 		parent::setWidth($width);;
 		echo "Current width after overriden function is " . $this->getWidth() . " <br>";
 	}

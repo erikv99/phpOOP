@@ -3,9 +3,17 @@ require_once("Objects/Table.php");
 require_once("Objects/Stool.php");
 require_once("Objects/Chair.php");
 
-// Creating a new stool and table instance
-$myStool = new Stool(40, 50, "Purple");
-$myTable = new Table(90, 80, "Wood");
+// Creating a new stool, table and char instance (chair should raise a NegativeOrZeroNumberException)
+try 
+{
+	$myStool = new Stool(40, 50, "Purple");
+	$myTable = new Table(90, 80, "Wood");
+	$myChair = new Chair(0, -10, "Sofa"); 
+}
+catch (NegativeOrZeroNumberException $e) 
+{
+	echo $e->getUserFriendlyMessage();
+}
 
 // Getting and printing the const Manufacturer 
 echo "Table Manufacturer: " . Table::MANUFACTURER . "<br/>";
@@ -46,4 +54,5 @@ catch (Exception $e)
 }
 
 $myTable->putObjectOnTable($myStool);
+
 ?>
