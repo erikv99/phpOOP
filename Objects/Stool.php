@@ -1,5 +1,5 @@
 <?php 
-include_once("Super/Furniture.php");
+require_once("Super/Furniture.php");
 /** Stool class (inherits from Furniture) */
 class Stool extends Furniture
 {

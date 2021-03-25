@@ -14,8 +14,8 @@ class Furniture
 
 	protected function __construct(int $width, int $height)
 	{
-		// Using named arguments like this requires php v >= 8. So if it throws an error thats the problem.
-		if ($width <= 0) { throw new NegativeOrZeroNumberException(umberIdentifier: "Width"); }
+		// Using named arguments like this requires php version >= 8. So if it throws an error thats the problem.
+		if ($width <= 0) { throw new NegativeOrZeroNumberException(numberIdentifier: "Width"); }
 		if ($height <= 0) { throw new NegativeOrZeroNumberException(numBerIdentifier: "Height"); }
 		$this->width = $width;
 		$this->height = $height;
@@ -23,7 +23,7 @@ class Furniture
 
 	public function __destruct()
 	{
-		echo "Furniture exterminated<br>";
+		echo "<br>Furniture exterminated<br>";
 	}
 
 	/**
